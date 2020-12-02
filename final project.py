@@ -31,8 +31,8 @@ data = get_top10()
 database(data)
 
 # spotify API
-def spotifysearch(x):
-    url = 'https://api.spotify.com/search'
-    page = requests.get(url, params = {'term' :x})
+def spotifysearch(playlist):
+    url = 'https://api.spotify.com/v1/playlists'
+    page = requests.get(url, params = {'playlist_id':playlist})
     return page.json()
 
