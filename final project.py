@@ -29,3 +29,7 @@ def database(data):
 
 data = get_top10()
 database(data)
+
+# spotify API
+def spotifysearch(x):
+    url = 'https://api.spotify.com'
