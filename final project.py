@@ -32,4 +32,7 @@ database(data)
 
 # spotify API
 def spotifysearch(x):
-    url = 'https://api.spotify.com'
+    url = 'https://api.spotify.com/search'
+    page = requests.get(url, params = {'term' :x})
+    return page.json()
+
