@@ -33,6 +33,6 @@ database(data)
 # spotify API
 def spotifysearch(playlist):
     url = 'https://api.spotify.com/v1/playlists'
-    page = requests.get(url, params = {'playlist_id':playlist})
+    page = requests.get(url + playlist)
     return page.json()
 
