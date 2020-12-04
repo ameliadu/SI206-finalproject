@@ -62,5 +62,6 @@ def SetUpAxes(data):
          
 song =[]
 chart_location =[]
+df = pd.DataFrame(dict(songs = song, chart = int(chart_location))
     
     
