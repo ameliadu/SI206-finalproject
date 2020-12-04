@@ -7,6 +7,7 @@ os.environ['SPOTIPY_CLIENT_ID']='ab463a3679544f58aa17e4f5bf167b94'
 os.environ['SPOTIPY_CLIENT_SECRET']='a9c2cb89d03b4610a3682f758765ad95'
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
+import plotly.graph_objects as go
 
 def us_top25(cur, conn):
     cur.execute('CREATE TABLE IF NOT EXISTS UStop25 (rank INTEGER PRIMARY KEY, title TEXT, artist TEXT)')
@@ -50,3 +51,16 @@ us_top25(cur, conn)
 country_top25(australia_top_25, 'Australia', cur, conn)
 country_top25(canada_top_25, 'Canada', cur, conn)
 country_top25(uk_top_25, 'UK', cur, conn)
+
+def SetUpAxes(data):
+    #select top 25
+    list= []
+    cur.execute('SELECT * FROM country_top_25)
+    for row in cur:
+        list.append(row)
+    return list
+         
+song =[]
+chart_location =[]
+    
+    
